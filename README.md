@@ -2,6 +2,8 @@
 
 # Demo DevSecOps: pipeline que bloquea una app vulnerable
 
+[![Pipeline DevSecOps](https://github.com/71l0/UTN-SSI-Grupo_2/actions/workflows/devsecops.yml/badge.svg?branch=main&event=push)](https://github.com/71l0/UTN-SSI-Grupo_2/actions/workflows/devsecops.yml)
+
 Caso práctico para la monografía. Una misma aplicación web (Flask) existe en dos versiones:
 
 | Carpeta | Contenido |
