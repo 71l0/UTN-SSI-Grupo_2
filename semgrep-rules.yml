@@ -1,0 +1,21 @@
+rules:
+  - id: sql-injection-f-string
+    languages: [python]
+    severity: ERROR
+    message: "Posible inyección SQL: no armes consultas con f-strings o concatenación. Usá consultas parametrizadas."
+    patterns:
+      - pattern: $DB.execute(f"...")
+  - id: sql-injection-var-f-string
+    languages: [python]
+    severity: ERROR
+    message: "Posible inyección SQL: la consulta se construyó con un f-string. Usá consultas parametrizadas."
+    patterns:
+      - pattern: |
+          $Q = f"..."
+          ...
+          $DB.execute($Q)
+  - id: flask-debug-enabled
+    languages: [python]
+    severity: ERROR
+    message: "Flask con debug=True expone una consola interactiva. Desactivalo fuera de desarrollo."
+    pattern: $APP.run(..., debug=True, ...)
