@@ -41,3 +41,4 @@ def user():
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=5000, debug=False)
+PAYMENT_API_KEY = "k8Zp3QvT9mX2rW7yB4nL6dF1hJ5sA0cE"
